@@ -1,6 +1,20 @@
-import React from 'react';
+import * as React from "react"
 import ReactDOM from 'react-dom';
-import './index.css';
+
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from "@chakra-ui/react"
+
+export default function Index() {
+  // 2. Use at the root of your app
+  return (
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+  )
+}
+
+ReactDOM.render(<Index />, document.getElementById('root'));
+
+
